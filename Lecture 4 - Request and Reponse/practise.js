@@ -3,18 +3,23 @@ const http = require("http");
 const server = http.createServer((req, res) => {
   console.log(req.url, req.method);
   if (req.url === "/Home") {
+    res.write(title = "Home");
     res.write("<h1>Wel come my Home</h1>");
     return res.end();
   } else if (req.url === "/Men") {
+    res.write(title = "Men");
     res.write("<h1>Wel come my Men</h1>");
     return res.end();
   } else if (req.url === "/Women") {
+    res.write(title = "Women");
     res.write("<h1>Wel come my women</h1>");
     return res.end();
   } else if (req.url === "/Kids") {
+    res.write(title = "Kids");
     res.write("<h1>Wel come my Kids</h1>");
     return res.end();
   } else if (req.url === "/Cart") {
+    res.write(title = "Cart");
     res.write("<h1>Wel come my Cart</h1>");
     return res.end();
   }
