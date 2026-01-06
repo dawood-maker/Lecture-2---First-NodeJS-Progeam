@@ -1,2 +1,1 @@
-username=dawood+shahzad&gender=male
-username=QASIM&gender=male
+username=dawood+&gender=male
