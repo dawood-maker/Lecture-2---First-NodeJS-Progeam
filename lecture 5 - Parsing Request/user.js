@@ -37,20 +37,19 @@ const server = http.createServer((req, res) => {
 
   // Handle form submission
   else if (req.url.toUpperCase() === "/SUBMIT-DETAILS" && req.method === "POST") {
-    const body = [];
-    req.on("data", chunk => body.push(chunk));
+    let body = ""; // directly store incoming data
+
+    req.on("data", chunk => body += chunk); // concatenate data
     req.on("end", () => {
-      const parsed = Buffer.concat(body).toString();
-
       // Save user input in file (append for multiple submissions)
-      fs.appendFileSync('Dawood.txt', parsed + '\n', 'utf8');
-      console.log("User data saved:", parsed);
+      fs.appendFileSync('Dawood.txt', body + '\n', 'utf8');
+      console.log("User data saved:", body);
 
-      // Send response to browser (visible in network tab)
+      // Send response to browser
       res.setHeader("Content-Type", "text/html");
       res.write("<html><body style='text-align:center;'>");
       res.write("<h1>Data Saved Successfully!</h1>");
-      res.write("<p>" + parsed + "</p>");
+      res.write("<p>" + body + "</p>");
       res.write('<a href="/">Go Back</a>');
       res.write("</body></html>");
       res.end();
