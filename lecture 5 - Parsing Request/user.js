@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
     res.setHeader("Content-Type", "text/html");
 
     res.write("<html>");
-    res.write("<head><title>Complete Coding</title></head>");
+    res.write("<head><title>Practise Coding Test </title></head>");
     res.write("<body>");
 
     res.write("<h1 style='text-align:center;'>Enter Your Details</h1>");
@@ -43,7 +43,7 @@ const server = http.createServer((req, res) => {
       const parsed = Buffer.concat(body).toString();
 
       // Save user input in file (append for multiple submissions)
-      fs.appendFileSync('user.txt', parsed + '\n', 'utf8');
+      fs.appendFileSync('Dawood.txt', parsed + '\n', 'utf8');
       console.log("User data saved:", parsed);
 
       // Send response to browser (visible in network tab)
