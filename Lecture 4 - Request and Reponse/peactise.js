@@ -5,20 +5,19 @@ const server = http.createServer((req, res) => {
   if (req.url === "/Home") {
     res.write("<h1>Wel come my Home</h1>");
     return res.end();
-  }   else  if (req.url === "/Men") {
+  } else if (req.url === "/Men") {
     res.write("<h1>Wel come my Men</h1>");
     return res.end();
-  }else  if (req.url === "/Women") {
+  } else if (req.url === "/Women") {
     res.write("<h1>Wel come my women</h1>");
     return res.end();
-  }else  if (req.url === "/Kids") {
+  } else if (req.url === "/Kids") {
     res.write("<h1>Wel come my Kids</h1>");
     return res.end();
-  }else  if (req.url === "/Cart") {
+  } else if (req.url === "/Cart") {
     res.write("<h1>Wel come my Cart</h1>");
     return res.end();
   }
-
 
   res.write(
     `
