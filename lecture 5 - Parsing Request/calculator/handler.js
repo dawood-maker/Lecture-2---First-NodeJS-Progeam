@@ -1,7 +1,9 @@
+const { sumRequestHandler } = require("./sum");
+
 const requestHandler = (req, res) => {
   console.log(req.url, req.method);
 
-  // HOME PAGE
+  // HOME PAGE (GET)
   if (req.url === "/" && req.method === "GET") {
     res.setHeader("Content-Type", "text/html");
     res.write(`
@@ -15,10 +17,10 @@ const requestHandler = (req, res) => {
         </body>
       </html>
     `);
-    return res.end(); // ✅ FIX
+    return res.end();
   }
 
-  // CALCULATOR PAGE
+  // CALCULATOR PAGE (GET)
   else if (req.url === "/calculator" && req.method === "GET") {
     res.setHeader("Content-Type", "text/html");
     res.write(`
@@ -29,14 +31,19 @@ const requestHandler = (req, res) => {
         <body>
           <h1>Here is the Calculator</h1>
           <form action="/calculator-result" method="POST">
-            <input type="text" placeholder="First Num" name="first" />
-            <input type="text" placeholder="Second Num" name="second" />
+            <input type="number" placeholder="First Num" name="first" required />
+            <input type="number" placeholder="Second Num" name="second" required />
             <input type="submit" value="Submit" />
           </form>
         </body>
       </html>
     `);
-    return res.end(); // ✅ VERY IMPORTANT
+    return res.end();
+  }
+
+  // CALCULATOR RESULT (POST)
+  else if (req.url === "/calculator-result" && req.method === "POST") {
+    return sumRequestHandler(req, res);
   }
 
   // 404 PAGE
