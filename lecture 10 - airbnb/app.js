@@ -1,9 +1,12 @@
+//Express module
 const express = require("express");
+
+//Local modules
+const userRouter = require("./route/userRouter");
+const hostRouter = require("./route/hostRouter");
+
 const app = express();
 const PORT = 8090;
-
-// Body parser (POST data read karne ke liye)
-app.use(express.urlencoded({ extended: false }));
 
 // Logger middleware
 app.use((req, res, next) => {
@@ -11,37 +14,12 @@ app.use((req, res, next) => {
   next();
 });
 
-// Home page
-app.get("/", (req, res) => {
-  res.send(`
-    <h1>Welcome to Airbnb</h1>
-    <a href="/add-home">Add Home</a>
-  `);
-});
+// Body parser middleware
+app.use(express.urlencoded({ extended: false }));
 
-// Add Home Form GET
-app.get("/add-home", (req, res) => {
-  res.send(`
-    <h1>Register your home here:</h1>
-    <form action="/add-home" method="POST">
-      <input
-        type="text"
-        name="houseName"
-        placeholder="Enter the name for your home"
-      />
-      <button type="submit">Add Home</button>
-    </form>
-  `);
-});
-
-//POST Handling
-app.post("/add-home", (req, res) => {
-  res.send(`
-    <h1>Home Registered successfully</h1>
-    <a href="/">Go To Home</a>
-  `);
-});
-
+// Routes middleware
+app.use(userRouter);
+app.use(hostRouter);
 
 // Server
 app.listen(PORT, () => {
