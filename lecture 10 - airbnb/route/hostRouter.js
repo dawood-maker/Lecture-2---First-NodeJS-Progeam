@@ -1,29 +1,50 @@
-//Express module
+// // Core module
+// const path = require("path");
+
+// // Express module
+// const express = require("express");
+// const hostRouter = express.Router();
+
+// // GET → show form page
+// hostRouter.get("/add-home", (req, res) => {
+//   res.sendFile(
+//     path.join(__dirname, "../", "views", "add-home.html")
+//   );
+// });
+
+// // POST → handle form
+// hostRouter.post("/add-home", (req, res) => {
+//   console.log(req.body.houseName);
+//   res.send("<h1>Home Registered successfully</h1>");
+// });
+
+// module.exports = hostRouter;
+
+
+
+
+
+// Core module
+const path = require("path");
+
+// Express module
 const express = require("express");
 const hostRouter = express.Router();
 
-// Add Home Form GET
-hostRouter.get("/host/add-home", (req, res) => {
-  res.send(`
-    <h1>Register your home here:</h1>
-    <form action="/host/add-home" method="POST">
-      <input
-        type="text"
-        name="houseName"
-        placeholder="Enter the name for your home"
-      />
-      <button type="submit">Add Home</button>
-    </form>
-  `);
+// GET → show form page
+hostRouter.get("/add-home", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "../views", "add-home.html")
+  );
 });
 
-// POST Handling
-hostRouter.post("/host/add-home", (req, res) => {
-  console.log(req.body);
-  res.send(`
-    <h1>Home Registered successfully</h1>
-    <a href="/">Go To Home</a>
-  `);
+// POST → handle form
+hostRouter.post("/add-home", (req, res) => {
+  console.log(req.body.houseName);
+
+  res.sendFile(
+    path.join(__dirname, "../views", "home-added.html")
+  );
 });
 
 module.exports = hostRouter;
