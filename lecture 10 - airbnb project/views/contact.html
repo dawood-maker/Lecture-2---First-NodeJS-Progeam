@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Us</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #fdfbfb, #ebedee);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        background: #ffffff;
+        padding: 45px 55px;
+        border-radius: 14px;
+        width: 380px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 18px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        font-family: inherit;
+      }
+
+      textarea {
+        resize: none;
+        height: 100px;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #ff5a5f;
+        box-shadow: 0 0 5px rgba(255, 90, 95, 0.3);
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: #ff5a5f;
+        border: none;
+        color: #ffffff;
+        font-size: 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e0484d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Contact Us</h1>
+
+      <form action="/contact-us" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </body>
+</html>
