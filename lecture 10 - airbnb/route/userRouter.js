@@ -1,22 +1,3 @@
-// // Core module
-// const path = require("path");
-
-// // Express module
-// const express = require("express");
-// const userRouter = express.Router();
-
-// // Home page
-// userRouter.get("/", (req, res) => {
-//   res.sendFile(
-//     path.join(__dirname, "../", "views", "home.html")
-//   );
-// });
-
-// module.exports = userRouter;
-
-
-
-
 // Core module
 const path = require("path");
 
@@ -24,10 +5,13 @@ const path = require("path");
 const express = require("express");
 const userRouter = express.Router();
 
+// ✅ CORRECT relative path
+const rootdir = require("../utils/pathUtils");
+
 // Home page
 userRouter.get("/", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "../views", "home.html")
+    path.join(rootdir, "views", "home.html")
   );
 });
 

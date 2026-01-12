@@ -1,38 +1,3 @@
-// // Core module
-// const path = require("path")
-// //Express module
-// const express = require("express");
-
-// //Local modules
-// const userRouter = require("./route/userRouter");
-// const hostRouter = require("./route/hostRouter");
-
-// const app = express();
-// const PORT = 8090;
-
-// // Body parser middleware
-// app.use(express.urlencoded({ extended: false }));
-
-// // Routes middleware
-// app.use(userRouter);
-// app.use(hostRouter);
-
-
-//      //  404 ERROR coding
-// app.use((req, res, next) => {
-//   res.status(404).sendFile(path.join(__dirname, "../", "views", "404.html"));
-// });
-
-
-// // Server
-// app.listen(PORT, () => {
-//   console.log(`✅ Server running at http://localhost:${PORT}`);
-// });
-
-
-
-
-
 // Core module
 const path = require("path");
 
