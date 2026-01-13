@@ -6,42 +6,49 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Page center */
-body {
-  height: 100vh;
-  background-color: #f7f7f7;
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  padding: 16px 32px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-/* Card */
-.success-box {
-  background-color: white;
-  padding: 40px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-}
-
-/* Heading */
-#success-title {
+.navbar h1 {
   color: rgb(0, 136, 57);
-  margin-bottom: 20px;
+  font-size: 28px;
 }
 
-/* Link button */
-#home-link {
-  display: inline-block;
-  text-decoration: none;
+/* Button */
+.btn {
   background-color: rgb(0, 136, 57);
   color: white;
   padding: 10px 18px;
+  text-decoration: none;
   border-radius: 6px;
   font-size: 14px;
   transition: background-color 0.3s ease;
 }
 
-#home-link:hover {
+.btn:hover {
   background-color: rgb(0, 110, 46);
+}
+
+/* Hero section */
+.hero {
+  padding: 60px 32px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
 }
