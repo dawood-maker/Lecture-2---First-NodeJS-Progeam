@@ -6,17 +6,17 @@ const express = require("express");
 
 // Local modules
 const userRouter = require("./route/userRouter");
-const hostRouter = require("./route/hostRouter");
-const rootdir = require("./utils/pathUtils"); // Corrected path
+const hostRouter = require("./route/hostRoutes");
+const rootdir = require("./utils/pathUtils");
 
 const app = express();
-const PORT = 2535;
+const PORT = 2039;
 
 // Body parser middleware
 app.use(express.urlencoded({ extended: false }));
 
-// ✅ Static folder (Public) - must be before routes
-app.use(express.static(path.join(rootdir, "public")));
+// Serve static CSS files
+app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/", userRouter);
@@ -24,7 +24,9 @@ app.use("/host", hostRouter);
 
 // 404 Page
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(rootdir, "views", "404.html"));
+  res.status(404).sendFile(
+    path.join(rootdir, "views", "404.html")
+  );
 });
 
 // Server
