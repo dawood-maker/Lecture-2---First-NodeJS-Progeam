@@ -3,58 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <title>Home</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #fdfbfb, #ebedee);
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .container {
-        background: #ffffff;
-        padding: 50px 60px;
-        border-radius: 14px;
-        text-align: center;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-      }
-
-      h1 {
-        margin: 0 0 20px;
-        color: #333;
-        font-size: 36px;
-      }
-
-      p {
-        color: #666;
-        font-size: 16px;
-        margin-bottom: 30px;
-      }
-
-      a {
-        text-decoration: none;
-        background-color: #ff5a5f;
-        color: #ffffff;
-        padding: 12px 30px;
-        border-radius: 6px;
-        font-size: 15px;
-        transition: background 0.3s ease;
-      }
-
-      a:hover {
-        background-color: #e0484d;
-      }
-    </style>
+    <link rel="stylesheet" href="/output.css" />
   </head>
 
-  <body>
-    <div class="container">
-      <h1>Welcome to Our Website</h1>
-      <p>Your comfort and experience matter to us.</p>
-      <a href="/contact">Contact Us</a>
+  <body
+    class="m-0 font-sans bg-gradient-to-br from-[#fdfbfb] to-[#ebedee] h-screen flex items-center justify-center"
+  >
+    <div
+      class="container bg-white p-12 rounded-xl text-center shadow-[0_15px_35px_rgba(0,0,0,0.15)]"
+    >
+      <h1 class="m-0 mb-5 text-[#333] text-3xl">
+        Welcome to Our Website
+      </h1>
+
+      <p class="text-[#666] text-base mb-7">
+        Your comfort and experience matter to us.
+      </p>
+
+      <a
+        href="/contact"
+        class="bg-[#ff5a5f] text-white px-7 py-3 rounded-md text-sm hover:bg-[#e0484d] transition-colors"
+      >
+        Contact Us
+      </a>
     </div>
   </body>
 </html>

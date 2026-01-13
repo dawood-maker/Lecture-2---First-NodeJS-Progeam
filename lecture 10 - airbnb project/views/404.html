@@ -3,69 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <title>Oops! Page Missing</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #fdfbfb, #ebedee);
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .box {
-        background: #ffffff;
-        padding: 50px 60px;
-        border-radius: 14px;
-        text-align: center;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-      }
-
-      .code {
-        font-size: 72px;
-        font-weight: bold;
-        color: #ff5a5f;
-        margin-bottom: 10px;
-      }
-
-      h2 {
-        margin: 0;
-        color: #333;
-      }
-
-      p {
-        margin: 15px 0 30px;
-        color: #666;
-        font-size: 15px;
-      }
-
-      a {
-        display: inline-block;
-        padding: 12px 25px;
-        background-color: #ff5a5f;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 6px;
-        font-size: 14px;
-        transition: background 0.3s ease;
-      }
-
-      a:hover {
-        background-color: #e0484d;
-      }
-    </style>
+    <link rel="stylesheet" href="/output.css" />
   </head>
 
-  <body>
-    <div class="box">
-      <div class="code">404</div>
-      <h2>We couldn’t find this page</h2>
-      <p>
-        The link may be broken or the page might have been removed.  
+  <body
+    class="m-0 font-sans bg-gradient-to-br from-[#fdfbfb] to-[#ebedee] h-screen flex items-center justify-center"
+  >
+    <div
+      class="container bg-white p-12 rounded-xl text-center shadow-[0_15px_35px_rgba(0,0,0,0.15)]"
+    >
+      <div class="text-[#ff5a5f] text-6xl font-bold mb-4">
+        404
+      </div>
+
+      <h2 class="text-[#333] text-2xl mb-4">
+        We couldn’t find this page
+      </h2>
+
+      <p class="text-[#666] text-base mb-7">
+        The link may be broken or the page might have been removed.
         Please return to the homepage and continue exploring.
       </p>
-      <a href="/">Back to Home</a>
+
+      <a
+        href="/"
+        class="bg-[#ff5a5f] text-white px-7 py-3 rounded-md text-sm hover:bg-[#e0484d] transition-colors"
+      >
+        Back to Home
+      </a>
     </div>
   </body>
 </html>
