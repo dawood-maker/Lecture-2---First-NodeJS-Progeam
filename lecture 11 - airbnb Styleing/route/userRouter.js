@@ -1,18 +1,11 @@
-// Core module
-const path = require("path");
-
-// Express module
 const express = require("express");
-const userRouter = express.Router();
-
-// ✅ CORRECT relative path
+const path = require("path");
 const rootdir = require("../utils/pathUtils");
 
-// Home page
-userRouter.get("/", (req, res) => {
-  res.sendFile(
-    path.join(rootdir, "views", "home.html")
-  );
+const router = express.Router();
+
+router.get("/", (req, res) => {
+  res.sendFile(path.join(rootdir, "views", "home.html"));
 });
 
-module.exports = userRouter;
+module.exports = router;
