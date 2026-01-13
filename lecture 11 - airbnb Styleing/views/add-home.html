@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add Home</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Home</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/add-home.css">
-</head>
-<body>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/add-home.css" />
+    <link rel="stylesheet" href="/output.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Register your home</h1>
 
-  <div class="container">
-    <h1>Register your home</h1>
+      <form action="/host/add-home" method="POST">
+        <input
+          type="text"
+          name="houseName"
+          placeholder="Enter home name"
+          required
+        />
 
-    <form action="/host/add-home" method="POST">
-      <input
-        type="text"
-        name="houseName"
-        placeholder="Enter home name"
-        required
-      />
-
-      <button type="submit">Add Home</button>
-    </form>
-  </div>
-
-</body>
+        <button type="submit">Add Home</button>
+      </form>
+    </div>
+  </body>
 </html>
