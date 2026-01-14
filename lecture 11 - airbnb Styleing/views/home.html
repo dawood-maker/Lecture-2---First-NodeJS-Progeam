@@ -5,20 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Airbnb Home</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/home.css">
-  <link rel="stylesheet" href="output.css">
+  <!-- Tailwind Output -->
+  <link rel="stylesheet" href="/output.css">
 </head>
-<body>
 
-  <header class="navbar">
-    <h1>Airbnb</h1>
-    <a class="btn" href="/host/add-home">Add Home</a>
+<body class="m-0 font-sans bg-gray-100">
+
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-8 py-4 bg-white shadow">
+    <h1 class="text-2xl font-bold text-[#ff385c]">Airbnb</h1>
+
+    <a
+      href="/host/add-home"
+      class="bg-[#ff385c] text-white px-5 py-2 rounded-md text-sm hover:bg-[#e03150] transition-colors"
+    >
+      Add Home
+    </a>
   </header>
 
-  <main class="hero">
-    <h2>Welcome to Airbnb</h2>
-    <p>Book unique homes and experiences all over the world.</p>
+  <!-- Hero Section -->
+  <main class="flex flex-col items-center justify-center text-center py-24 px-4">
+    <h2 class="text-4xl font-semibold mb-4 text-gray-800">
+      Welcome to Airbnb
+    </h2>
+
+    <p class="text-lg text-gray-600 max-w-xl">
+      Book unique homes and experiences all over the world.
+    </p>
   </main>
+
 </body>
 </html>

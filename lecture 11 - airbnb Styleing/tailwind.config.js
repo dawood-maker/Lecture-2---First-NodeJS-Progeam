@@ -1,12 +1,10 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./*.html",        // Root folder ke HTML files
-    "./public/*.html", // Agar HTML public folder me hai
+    "./views/**/*.html",     // 🔥 HOME + 404
+    "./route/**/*.js",       // (safe side)
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-}
-
+};
