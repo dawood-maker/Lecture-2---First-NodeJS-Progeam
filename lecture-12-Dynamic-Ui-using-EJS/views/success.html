@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Registered</title>
+  <link rel="stylesheet" href="/output.css" />
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center font-sans">
+
+  <div class="bg-white p-8 w-80 rounded-lg shadow-md text-center">
+    <h1 class="text-green-600 mb-5 text-xl font-bold"><%= message %></h1>
+    <p class="mb-4 text-gray-700">House Name: <strong><%= homeData.houseName %></strong></p>
+
+    <a href="/add-home"
+       class="inline-block bg-green-600 text-white px-4 py-2 rounded-md text-sm transition-colors hover:bg-green-700">
+      Add Another Home
+    </a>
+    <a href="/"
+       class="inline-block bg-gray-600 text-white px-4 py-2 rounded-md text-sm transition-colors hover:bg-gray-700 ml-2">
+      Go To Home
+    </a>
+  </div>
+
+</body>
+</html>
